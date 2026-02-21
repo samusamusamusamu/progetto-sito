@@ -21,7 +21,7 @@
       --off-white: #fffdf7;
       --dark-text: #4b2e2a;
       --light-gray: #e8e6e1;
-      --accent: #b8860b; /* oro antico */
+      --accent: #b8860b;
     }
 
     body {
@@ -32,9 +32,9 @@
       overflow-x: hidden;
     }
 
-    /* Hero Section Moderno */
+    /* Hero Section Senza Sfumato */
     .hero {
-      background: linear-gradient(135deg, rgba(161, 78, 42, 0.8), rgba(42, 77, 58, 0.6)), url('img/Commemorazione-eccidio-di-San-Benigno_1.jpg');
+      background: url('img/Commemorazione-eccidio-di-San-Benigno_1.jpg');
       background-size: cover;
       background-position: center;
       color: white;
@@ -42,22 +42,20 @@
       text-align: center;
       margin-bottom: 0;
       position: relative;
-      overflow: hidden;
     }
 
     .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(45deg, transparent 0%, rgba(0,0,0,0.2) 100%);
+      content: none;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .hero h1 {
@@ -66,15 +64,14 @@
       font-weight: 700;
       color: var(--off-white);
       margin-bottom: 1.5rem;
-      text-shadow: 3px 3px 8px rgba(0,0,0,0.6);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
       animation: fadeInDown 1s ease-out;
     }
 
     .hero p {
       font-family: 'Montserrat', sans-serif;
       font-size: 1.3rem;
-      max-width: 800px;
-      margin: 0 auto 2rem;
+      margin: 0 auto;
       font-weight: 300;
       animation: fadeInUp 1s ease-out 0.3s both;
     }
@@ -137,7 +134,7 @@
       color: var(--dark-text);
     }
 
-    /* Citazioni con Font Distintivo */
+    /* Citazioni Senza Apici */
     .quote {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
@@ -156,22 +153,12 @@
       animation: fadeIn 1.5s ease-out;
     }
 
-    .quote::before {
-      content: '"';
-      font-size: 4rem;
-      color: var(--light-rust);
-      position: absolute;
-      left: 10px;
-      top: -20px;
-      font-family: 'Playfair Display', serif;
-    }
-
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
 
-    /* Responsive & Modern Touch */
+    /* Responsive */
     @media (max-width: 992px) {
       .hero h1 { font-size: 3rem; }
       .hero p { font-size: 1.1rem; }
@@ -181,6 +168,7 @@
 
     @media (max-width: 768px) {
       .hero { padding: 100px 0; }
+      .hero-content { padding: 1.5rem; }
       .content-section { padding: 3rem 0; }
       .hero h1 { font-size: 2.5rem; }
     }
@@ -190,7 +178,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container hero-content">
+    <div class="hero-content">
       <h1>Cimitero di San Benigno</h1>
       <p>Un luogo di memoria, riflessione e responsabilità collettiva, dove la storia dei martiri della Candelora vive nel cuore della comunità.</p>
     </div>
