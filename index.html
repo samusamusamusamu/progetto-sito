@@ -3,41 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Il Mio Sito</title>
+  <title>Cimitero di San Benigno</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts: Serif elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
+    /* Stile generale */
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background: #f4f4f4;
+      font-family: 'Merriweather', serif;
+      background-color: #f9f5f0; /* sfondo chiaro */
+      color: #4b2e2a; /* colore ruggine scuro per il testo */
+      line-height: 1.6;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
     }
 
-    .card {
-      background: white;
-      padding: 20px;
+    /* Titolo */
+    h1 {
+      color: #a14e2a; /* colore ruggine più acceso */
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    /* Contenitore centrale */
+    .content {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      background-color: #fffdf7;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    button {
-      width: 100%;
-      padding: 15px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      background: #0077ff;
-      color: white;
+    /* Responsive: spaziatura mobile */
+    @media (max-width: 576px) {
+      .content {
+        padding: 1rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Stile paragrafi */
+    p {
+      margin-bottom: 1.2rem;
     }
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <h1>Il mio sito 📱</h1>
-    <p>Questa pagina è ottimizzata per telefono.</p>
-    <button>Cliccami</button>
+  <div class="container">
+    <div class="content">
+      <h1>Cimitero di San Benigno: il rito funebre dei martiri</h1>
+      <p>Dopo l’eccidio della Candelora, la comunità di San Benigno visse un periodo di grande dolore e sgomento. Il 2 febbraio 1945, tredici giovani furono fucilati in piazza sotto gli occhi dei loro concittadini: dodici morirono sul colpo, mentre Bartolomeo Garro sopravvisse miracolosamente. Il rito funebre del 18 novembre 1945 rappresentò non solo l’occasione per dare sepoltura ai martiri, ma anche un momento di elaborazione collettiva del lutto, di condivisione della memoria e di rafforzamento del legame comunitario.</p>
+      <p>Le famiglie, le autorità locali e gli abitanti parteciparono al corteo funebre, rendendo omaggio ai giovani caduti e cercando di trovare un senso nel dolore. Questo luogo oggi invita a fermarsi e a riflettere: ogni anno, la memoria dei martiri rinnova il suo richiamo. Il cimitero diventa così simbolo di responsabilità collettiva: la storia di quei ragazzi ci ricorda che la libertà e la giustizia non sono conquiste automatiche, ma frutto del coraggio e della determinazione di ciascuno.</p>
+      <p>Le testimonianze dei sopravvissuti e dei familiari, raccolte negli archivi storici, mostrano la sofferenza di chi perse i propri cari e il coraggio di chi, pur nel terrore, aiutò chi era rimasto ferito. Ogni passo compiuto lungo questo percorso è un richiamo a non dimenticare e a impegnarsi per un presente di pace e solidarietà.</p>
+    </div>
   </div>
 
+  <!-- Bootstrap JS (opzionale, per eventuali componenti interattivi) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
