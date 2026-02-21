@@ -153,6 +153,31 @@
       animation: fadeIn 1.5s ease-out;
     }
 
+    /* Immagine Funerali */
+    .funeral-image {
+      width: 100%;
+      max-width: 1000px;
+      margin: 2rem auto;
+      border-radius: 8px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      display: block;
+    }
+
+    .funeral-image:hover {
+      transform: scale(1.01);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+
+    .image-caption {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      color: var(--dark-green);
+      margin-top: 1rem;
+      font-style: italic;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -171,6 +196,7 @@
       .hero-content { padding: 1.5rem; }
       .content-section { padding: 3rem 0; }
       .hero h1 { font-size: 2.5rem; }
+      .funeral-image { max-width: 100%; }
     }
   </style>
 </head>
@@ -202,6 +228,11 @@
       <div class="container">
         <h2 class="section-title">Il Rito Funebre del 18 Novembre 1945</h2>
         <p>Il rito funebre del 18 novembre 1945 fu un momento di elaborazione collettiva del lutto. Famiglie, autorità e abitanti parteciparono al corteo, rendendo omaggio ai giovani caduti e cercando un senso nel dolore. Il cimitero divenne così simbolo di responsabilità collettiva e di memoria condivisa, un luogo dove la storia si fa monito per le generazioni future.</p>
+
+        <!-- Immagine dei funerali -->
+        <img src="img/funerali.jpg" alt="Funerali dei martiri di San Benigno, 18 novembre 1945" class="funeral-image">
+        <p class="image-caption">Il corteo funebre del 18 novembre 1945, un momento di condivisione del lutto e di omaggio ai martiri.</p>
+
         <p>Le testimonianze dei sopravvissuti e dei familiari, raccolte negli archivi storici, raccontano la sofferenza di chi perse i propri cari e il coraggio di chi, pur nel terrore, aiutò i feriti. Ogni anno, la memoria dei martiri rinnova il suo richiamo alla pace e alla solidarietà.</p>
       </div>
     </section>
