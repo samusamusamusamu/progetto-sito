@@ -3,71 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cimitero di San Benigno</title>
-  
-  <!-- Bootstrap CSS -->
+  <title>Cimitero di San Benigno: Memoria e Riflessione</title>
+
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Google Fonts: Serif elegante -->
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Elegant Serif & Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Stile generale */
-    body {
-      font-family: 'Merriweather', serif;
-      background-color: #f9f5f0; /* sfondo chiaro */
-      color: #4b2e2a; /* colore ruggine scuro per il testo */
-      line-height: 1.6;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+    /* Palette Colori: Ruggine, Beige, Verde Scuro, Bianco Rotto */
+    :root {
+      --rust: #a14e2a;
+      --light-rust: #d4a574;
+      --dark-green: #2a4d3a;
+      --beige: #f9f5f0;
+      --off-white: #fffdf7;
+      --dark-text: #4b2e2a;
     }
 
-    /* Titolo */
-    h1 {
-      color: #a14e2a; /* colore ruggine più acceso */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--beige);
+      color: var(--dark-text);
+      line-height: 1.8;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://mistralaiblackforestprod.blob.core.windows.net/images/blackforest/f638/6660/-404/d-4042-9d9f-487f708aa232/image.jpg?se=2026-02-21T13%3A48%3A21Z&sp=r&sv=2025-01-05&sr=b&sig=kxPZQZdSBDVK2dAk9Qy5rGhK%2BaVUz76H3ZT%2B%2BaimIms%3D');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 0;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
       font-weight: 700;
+      color: var(--off-white);
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Sezioni di Contenuto */
+    .content-section {
+      padding: 4rem 0;
+      background-color: var(--off-white);
+      border-radius: 12px;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .content-section:nth-child(even) {
+      background-color: rgba(161, 78, 42, 0.05);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--rust);
+      font-size: 2.2rem;
       text-align: center;
       margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 0.5rem;
     }
 
-    /* Contenitore centrale */
-    .content {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 1rem 1.5rem;
-      background-color: #fffdf7;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--light-rust);
     }
 
-    /* Responsive: spaziatura mobile */
-    @media (max-width: 576px) {
-      .content {
-        padding: 1rem;
+    .content-section p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+
+    /* Citazioni Evidenziate */
+    .quote {
+      font-style: italic;
+      color: var(--dark-green);
+      font-size: 1.2rem;
+      border-left: 4px solid var(--rust);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      background-color: rgba(42, 77, 58, 0.03);
+      padding: 1.5rem;
+      border-radius: 6px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
       }
-      h1 {
+      .section-title {
         font-size: 1.8rem;
       }
-    }
-
-    /* Stile paragrafi */
-    p {
-      margin-bottom: 1.2rem;
+      .content-section {
+        padding: 2rem 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div class="content">
-      <h1>Cimitero di San Benigno: il rito funebre dei martiri</h1>
-      <p>Dopo l’eccidio della Candelora, la comunità di San Benigno visse un periodo di grande dolore e sgomento. Il 2 febbraio 1945, tredici giovani furono fucilati in piazza sotto gli occhi dei loro concittadini: dodici morirono sul colpo, mentre Bartolomeo Garro sopravvisse miracolosamente. Il rito funebre del 18 novembre 1945 rappresentò non solo l’occasione per dare sepoltura ai martiri, ma anche un momento di elaborazione collettiva del lutto, di condivisione della memoria e di rafforzamento del legame comunitario.</p>
-      <p>Le famiglie, le autorità locali e gli abitanti parteciparono al corteo funebre, rendendo omaggio ai giovani caduti e cercando di trovare un senso nel dolore. Questo luogo oggi invita a fermarsi e a riflettere: ogni anno, la memoria dei martiri rinnova il suo richiamo. Il cimitero diventa così simbolo di responsabilità collettiva: la storia di quei ragazzi ci ricorda che la libertà e la giustizia non sono conquiste automatiche, ma frutto del coraggio e della determinazione di ciascuno.</p>
-      <p>Le testimonianze dei sopravvissuti e dei familiari, raccolte negli archivi storici, mostrano la sofferenza di chi perse i propri cari e il coraggio di chi, pur nel terrore, aiutò chi era rimasto ferito. Ogni passo compiuto lungo questo percorso è un richiamo a non dimenticare e a impegnarsi per un presente di pace e solidarietà.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Cimitero di San Benigno</h1>
+      <p>Un luogo di memoria, riflessione e responsabilità collettiva, dove la storia dei martiri della Candelora vive nel cuore della comunità.</p>
     </div>
+  </section>
+
+  <!-- Contenuto Principale -->
+  <div class="container">
+    <!-- Sezione 1: Storia -->
+    <section class="content-section">
+      <div class="container">
+        <h2 class="section-title">L’Eccidio della Candelora</h2>
+        <p>Il 2 febbraio 1945, tredici giovani di San Benigno furono fucilati in piazza sotto gli occhi dei loro concittadini. Dodici persero la vita sul colpo, mentre Bartolomeo Garro sopravvisse miracolosamente. Questo tragico evento segnò per sempre la memoria collettiva della comunità, trasformando il dolore in un impegno per la giustizia e la libertà.</p>
+        <div class="quote">
+          "La libertà e la giustizia non sono conquiste automatiche, ma frutto del coraggio e della determinazione di ciascuno."
+        </div>
+      </div>
+    </section>
+
+    <!-- Sezione 2: Il Rito Funebre -->
+    <section class="content-section">
+      <div class="container">
+        <h2 class="section-title">Il Rito Funebre del 18 Novembre 1945</h2>
+        <p>Il rito funebre del 18 novembre 1945 fu un momento di elaborazione collettiva del lutto. Famiglie, autorità e abitanti parteciparono al corteo, rendendo omaggio ai giovani caduti e cercando un senso nel dolore. Il cimitero divenne così simbolo di responsabilità collettiva e di memoria condivisa, un luogo dove la storia si fa monito per le generazioni future.</p>
+        <p>Le testimonianze dei sopravvissuti e dei familiari, raccolte negli archivi storici, raccontano la sofferenza di chi perse i propri cari e il coraggio di chi, pur nel terrore, aiutò i feriti. Ogni anno, la memoria dei martiri rinnova il suo richiamo alla pace e alla solidarietà.</p>
+      </div>
+    </section>
+
+    <!-- Sezione 3: Riflessione -->
+    <section class="content-section">
+      <div class="container">
+        <h2 class="section-title">Un Luogo di Riflessione</h2>
+        <p>Oggi, il Cimitero di San Benigno invita a fermarsi e a riflettere. È un luogo dove la memoria si fa impegno, dove il passato diventa lezione per il presente. Camminare tra queste tombe significa ricordare che la libertà è un diritto da difendere ogni giorno, con coraggio e determinazione.</p>
+        <div class="quote">
+          "La memoria dei martiri ci ricorda che la pace è un cammino quotidiano, fatto di scelte consapevoli e di responsabilità condivisa."
+        </div>
+      </div>
+    </section>
   </div>
 
-  <!-- Bootstrap JS (opzionale, per eventuali componenti interattivi) -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
